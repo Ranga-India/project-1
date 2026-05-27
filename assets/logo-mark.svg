@@ -1,0 +1,37 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logo-field" x1="18" y1="14" x2="76" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#163D74"/>
+      <stop offset="1" stop-color="#0B1E39"/>
+    </linearGradient>
+    <linearGradient id="logo-rim" x1="21" y1="18" x2="74" y2="79" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E7C99F"/>
+      <stop offset="1" stop-color="#B8966A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="48" cy="48" r="43" fill="url(#logo-field)"/>
+  <circle cx="48" cy="48" r="41.5" stroke="url(#logo-rim)" stroke-width="2.5"/>
+  <path
+    d="M34.5 28.5C29.4 31.7 26 37.7 26 44.6C26 57.3 33.1 64.9 38.3 70.7C42 74.8 45.1 79 48 79C50.9 79 54 74.8 57.7 70.7C62.9 64.9 70 57.3 70 44.6C70 37.7 66.6 31.7 61.5 28.5"
+    stroke="#F7F5F1"
+    stroke-width="3.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M36 39.8C39.4 35.4 43.4 33.2 48 33.2C52.6 33.2 56.6 35.4 60 39.8"
+    stroke="#E7C99F"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+  <path
+    d="M35.5 52C39.4 58.8 43.6 62.2 48 62.2C52.4 62.2 56.6 58.8 60.5 52"
+    stroke="#DAB78C"
+    stroke-width="3.2"
+    stroke-linecap="round"
+  />
+  <path
+    d="M67.8 20L69.8 26.2L76 28.2L69.8 30.2L67.8 36.4L65.8 30.2L59.6 28.2L65.8 26.2L67.8 20Z"
+    fill="#E7C99F"
+  />
+</svg>
