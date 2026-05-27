@@ -1,0 +1,5 @@
+# Allow all web crawlers to access all content
+User-agent: *
+Disallow:
+
+Sitemap: https://www.cosmeticdentistrywilton.com/sitemap.xml
