@@ -31,7 +31,11 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
     rel="stylesheet"
   >
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- 
+    reCAPTCHA v3 script. 
+    IMPORTANT: Replace "YOUR_V3_SITE_KEY_HERE" with your actual reCAPTCHA v3 site key.
+  -->
+  <script src="https://www.google.com/recaptcha/api.js?render=YOUR_V3_SITE_KEY_HERE"></script>
   <style>
     :root {
       --navy: #0d2b55;
@@ -1056,13 +1060,6 @@
               <textarea id="message" name="message" rows="5"></textarea>
             </div>
             <div class="field">
-              <!-- 
-                IMPORTANT: Replace "YOUR_SITE_KEY_HERE" with your actual Google reCAPTCHA site key.
-                You can get a key from the Google reCAPTCHA admin console.
-              -->
-              <div class="g-recaptcha" data-sitekey="6LfsJAEtAAAAAGQs2u1gYI1l-nr0lDiqQVfiAUya"></div>
-            </div>
-            <div class="field">
               <button type="submit" class="form-submit">Send Message</button>
             </div>
           </form>
@@ -1119,49 +1116,57 @@
     const contactForm = document.getElementById("contact-form");
     const formStatus = document.getElementById("form-status");
 
-    contactForm.addEventListener("submit", async (event) => {
+    contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
       formStatus.textContent = "Sending...";
       formStatus.style.color = "var(--muted)";
 
-      const formData = new FormData(contactForm); // e.g. { name: 'John', ... }
-      const formProps = Object.fromEntries(formData.entries());
-      const recaptchaResponse = grecaptcha.getResponse();
+      // IMPORTANT: Replace "YOUR_V3_SITE_KEY_HERE" with your actual reCAPTCHA v3 site key.
+      const recaptchaSiteKey = "6LfsJAEtAAAAAGQs2u1gYI1l-nr0lDiqQVfiAUya";
 
-      const data = {
-        receiver: 'info@fordonez.com',
-        subject: 'Cosmetic Dentistry Wilton - Website Contact Form - Visitor:',
-        name: formProps.name,
-        email: formProps.email,
-        phone: formProps.phone,
-        message: formProps.message,
-        'g-recaptcha-response': recaptchaResponse
-      };
+      grecaptcha.ready(function() {
+        grecaptcha.execute(recaptchaSiteKey, {action: 'submit'}).then(async function(token) {
+          const formData = new FormData(contactForm);
+          const formProps = Object.fromEntries(formData.entries());
 
-      if (!recaptchaResponse) {
-        formStatus.textContent = "Please complete the reCAPTCHA.";
-        formStatus.style.color = "red";
-        return;
-      }
+          const data = {
+            receiver: 'info@fordonez.com',
+            subject: 'Cosmetic Dentistry Wilton - Website Contact Form - Visitor:',
+            name: formProps.name,
+            email: formProps.email,
+            phone: formProps.phone,
+            message: formProps.message,
+            'g-recaptcha-response': token
+          };
 
-      try {
-        // IMPORTANT: Replace this with your actual API endpoint.
-        const response = await fetch("https://zvfehqhcjj.execute-api.us-east-1.amazonaws.com/beta/contact-us-page-email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-          },
-          body: JSON.stringify(data),
+          try {
+            const response = await fetch("https://zvfehqhcjj.execute-api.us-east-1.amazonaws.com/beta/contact-us-page-email", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+              formStatus.textContent = "Thank you for your message! We will get back to you shortly.";
+              formStatus.style.color = "green";
+              contactForm.reset();
+            } else {
+              throw new Error("Failed to send message. The server responded with an error.");
+            }
+          } catch (error) {
+            console.error("Form submission error:", error);
+            formStatus.textContent = "Sorry, there was an error sending your message. Please try again later or call the office.";
+            formStatus.style.color = "red";
+          }
         });
-
-        if (response.ok) {
-          formStatus.textContent = "Thank you for your message! We will get back to you shortly.";
-          formStatus.style.color = "green";
-          contactForm.reset();
-          grecaptcha.reset();
-        } else {
-          throw new Error("Failed to send message. The server responded with an error.");
+      });
+    });
+  </script>
+</body>
+</html>
         }
       } catch (error) {
         console.error("Form submission error:", error);
