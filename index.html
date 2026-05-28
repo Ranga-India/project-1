@@ -111,7 +111,7 @@
     }
 
     .brand-icon {
-      width: 60px;
+      width: 220px;
       height: 60px;
       flex: none;
       filter: drop-shadow(0 12px 24px rgba(13, 43, 85, 0.16));
@@ -296,19 +296,14 @@
       color: var(--navy);
     }
     .hero-card {
-      background-image: url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .hero-card {
       position: relative;
       min-height: 520px;
       padding: 1.4rem;
       border-radius: var(--radius-lg);
       background:
-        linear-gradient(160deg, rgba(13, 43, 85, 0.88), rgba(17, 35, 65, 0.82)),
-        linear-gradient(45deg, rgba(184, 150, 106, 0.1), transparent 55%);
+        linear-gradient(160deg, rgba(13, 43, 85, 0.7), rgba(17, 35, 65, 0.6)),
+        linear-gradient(45deg, rgba(184, 150, 106, 0.05), transparent 55%),
+        url('assets/dr-ordonez-portrait.jpg') center top / cover no-repeat;
       box-shadow: var(--shadow);
       overflow: hidden;
     }
@@ -344,7 +339,7 @@
       border: 1px solid rgba(255, 255, 255, 0.12);
       background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.09)),
-        radial-gradient(circle at top, rgba(184, 150, 106, 0.28), transparent 48%);
+        radial-gradient(circle at top, rgba(184, 150, 106, 0.32), transparent 55%);
       display: grid;
       align-content: end;
       padding: 2rem;
@@ -622,8 +617,8 @@
       margin-top: 2rem;
       padding: 1.5rem 1.6rem;
       border-radius: var(--radius-md);
-      background: linear-gradient(135deg, rgba(184, 150, 106, 0.2), rgba(255, 255, 255, 0.05));
-      border: 1px solid rgba(184, 150, 106, 0.24);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .testimonial-cta p {
@@ -805,22 +800,21 @@
     <div class="container header-inner">
       <a class="brand" href="#home" aria-label="Go to home section">
         <span class="brand-main">
-          <img class="brand-icon" src="assets/logo-mark.svg" alt="Dr. Felipe Ordonez, DDS Logo">
-          <span class="brand-text">
+          <img class="brand-icon" src="assets/wilton-logo.png" alt="Family & Cosmetic Dentistry Logo">
+          <!-- <span class="brand-text">
             <span class="brand-copy">
               <span class="brand-mark">Dr. Felipe Ordonez</span>
               <span class="brand-credential">DDS</span>
             </span>
             <span class="brand-subtitle">Cosmetic Dentistry | Wilton, CT</span>
-          </span>
+          </span> -->
         </span>
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#home">Home</a>
-        <a href="practice.html">Practice</a>
-        <a href="procedures.html">Procedures</a>
+        <a href="services.html">Services</a>
         <a href="about.html">About</a>
-        <a href="#testimonials">Testimonials</a>
+        <a href="testimonials.html">Testimonials</a>
         <a href="contact.html">Contact</a>
       </nav>
       <a class="call-cta" href="tel:+12037627300">Call (203) 762-7300</a>
@@ -835,8 +829,8 @@
           <h1>Creating Beautiful Smiles for Over 29 Years</h1>
           <p>Cosmetic and restorative dentistry with a calm, personalized approach to help you achieve a healthy, confident smile.</p>
           <div class="hero-actions">
-            <a href="tel:+12037627300">Call to Schedule</a>
-            <a href="#testimonials">Read Patient Testimonials</a>
+            <a href="services.html">Our Services</a>
+            <a href="about.html">About the Doctor</a>
           </div>
         </div>
 
@@ -905,7 +899,7 @@
       </div>
     </section>
 
-    <section class="section" id="practice" aria-labelledby="practice-heading">
+    <!-- <section class="section" id="practice" aria-labelledby="practice-heading">
       <div class="container">
         <div class="reveal">
           <div class="section-label">Our Practice</div>
@@ -933,7 +927,7 @@
         </div>
 
         <div class="section-actions reveal">
-          <a href="practice.html">View Practice Page</a>
+          <a href="services.html">Visit Services Page</a>
         </div>
       </div>
     </section>
@@ -969,7 +963,7 @@
         </div>
 
         <div class="section-actions reveal">
-          <a href="procedures.html">View Procedures Page</a>
+          <a href="services.html">Explore Services</a>
         </div>
       </div>
     </section>
@@ -1005,14 +999,21 @@
           <a href="about.html">Read Full Doctor Bio</a>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+    <!-- <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
       <div class="container">
         <div class="reveal">
           <div class="section-label">Testimonials</div>
           <h2 class="section-heading" id="testimonials-heading">Real patient reassurance and lasting trust.</h2>
-          <p class="section-intro">Patient feedback is a core part of our practice story. These highlights reflect the calm, personal, and confidence-building experience we aim to provide.</p>
+          <p class="section-intro">
+            We are proud to hold a 5.0-star rating on Google from our patients. These
+            highlights reflect the calm, personal, and confidence-building experience
+            we aim to provide.
+            <a href="https://www.google.com/maps/search/?api=1&query=Family+and+Cosmetic+Dentistry+of+Wilton%2C+LLC+reviews" target="_blank" rel="noreferrer" style="text-decoration: underline; color: var(--navy); font-weight: 500;">
+              Read more reviews here.
+            </a>
+          </p>
         </div>
 
         <div class="testimonial-grid">
@@ -1132,7 +1133,7 @@
           <a href="tel:+12037627300">Call (203) 762-7300</a>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 
   <footer class="site-footer">

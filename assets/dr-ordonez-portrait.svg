@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e2f5e"/>
+      <stop offset="60%" stop-color="#0a1e3d"/>
+      <stop offset="100%" stop-color="#040d1a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="42%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#1a4a88" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#040d1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="floorGlow" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#b8966a" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#b8966a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0%" stop-color="#f4f7fa"/>
+      <stop offset="100%" stop-color="#ccd5e2"/>
+    </linearGradient>
+    <linearGradient id="coatL" x1="0" y1="0" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#e8edf5"/>
+      <stop offset="100%" stop-color="#d4dce8"/>
+    </linearGradient>
+    <linearGradient id="coatR" x1="1" y1="0" x2="0" y2="0.5">
+      <stop offset="0%" stop-color="#dde4ef"/>
+      <stop offset="100%" stop-color="#c8d2e0"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d89870"/>
+      <stop offset="60%" stop-color="#c98558"/>
+      <stop offset="100%" stop-color="#b87248"/>
+    </linearGradient>
+    <linearGradient id="skinNeck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c98558"/>
+      <stop offset="100%" stop-color="#b87248"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#221408"/>
+      <stop offset="100%" stop-color="#0e0904"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b8966a" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#b8966a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#b8966a" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softEdge" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="subtleShadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <rect width="800" height="1000" fill="url(#floorGlow)"/>
+
+  <!-- Subtle grid texture -->
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#b8966a" stroke-width="0.3" opacity="0.08"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#b8966a" stroke-width="0.3" opacity="0.06"/>
+  <line x1="0" y1="600" x2="800" y2="600" stroke="#b8966a" stroke-width="0.3" opacity="0.06"/>
+  <line x1="0" y1="800" x2="800" y2="800" stroke="#b8966a" stroke-width="0.3" opacity="0.08"/>
+  <line x1="200" y1="0" x2="200" y2="1000" stroke="#b8966a" stroke-width="0.3" opacity="0.06"/>
+  <line x1="600" y1="0" x2="600" y2="1000" stroke="#b8966a" stroke-width="0.3" opacity="0.06"/>
+
+  <!-- Decorative concentric rings (top-right) -->
+  <circle cx="730" cy="95" r="220" fill="none" stroke="#b8966a" stroke-width="0.7" opacity="0.22"/>
+  <circle cx="730" cy="95" r="170" fill="none" stroke="#b8966a" stroke-width="0.5" opacity="0.18"/>
+  <circle cx="730" cy="95" r="120" fill="none" stroke="#b8966a" stroke-width="0.5" opacity="0.14"/>
+  <circle cx="730" cy="95" r="70"  fill="none" stroke="#b8966a" stroke-width="0.5" opacity="0.10"/>
+
+  <!-- Decorative small rings (bottom-left) -->
+  <circle cx="70" cy="900" r="100" fill="none" stroke="#b8966a" stroke-width="0.4" opacity="0.12"/>
+  <circle cx="70" cy="900" r="65"  fill="none" stroke="#b8966a" stroke-width="0.4" opacity="0.10"/>
+
+  <!-- ===== WHITE COAT / BODY ===== -->
+  <!-- Main coat body -->
+  <path d="M 0 820 L 0 1000 L 800 1000 L 800 820
+           C 740 790, 640 755, 560 728
+           C 520 712, 492 688, 474 660
+           L 455 628 L 400 598 L 345 628 L 326 660
+           C 308 688, 280 712, 240 728
+           C 160 755, 60 790, 0 820 Z"
+        fill="url(#coat)" filter="url(#subtleShadow)"/>
+
+  <!-- Left coat lapel -->
+  <path d="M 0 820 C 60 790 160 755 240 728 C 280 712 308 688 326 660 L 345 628 L 400 700 L 400 1000 L 0 1000 Z"
+        fill="url(#coatL)"/>
+  <!-- Right coat lapel -->
+  <path d="M 800 820 C 740 790 640 755 560 728 C 520 712 492 688 474 660 L 455 628 L 400 700 L 400 1000 L 800 1000 Z"
+        fill="url(#coatR)"/>
+
+  <!-- Coat lapel inner fold lines -->
+  <path d="M 326 660 Q 360 680, 400 700" stroke="#b8c4d8" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M 474 660 Q 440 680, 400 700" stroke="#aab8cc" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+  <!-- Shirt (navy) at collar opening -->
+  <path d="M 358 600 L 400 650 L 442 600 L 432 590 L 400 635 L 368 590 Z" fill="#0d2b55"/>
+
+  <!-- Gold tie -->
+  <path d="M 382 588 L 418 588 L 422 618 L 400 638 L 378 618 Z" fill="#b8966a"/>
+  <path d="M 382 588 L 400 605 L 418 588" fill="#a07550" stroke="#a07550" stroke-width="0.5"/>
+  <path d="M 392 635 L 400 648 L 408 635 L 400 638 Z" fill="#8a6040"/>
+
+  <!-- Coat collar left -->
+  <path d="M 334 572 L 375 595 L 362 618 L 312 600 Z" fill="#eef2f8"/>
+  <path d="M 335 573 L 374 594 L 362 617" stroke="#c8d0e0" stroke-width="0.8" fill="none"/>
+  <!-- Coat collar right -->
+  <path d="M 466 572 L 425 595 L 438 618 L 488 600 Z" fill="#e8edf5"/>
+  <path d="M 465 573 L 426 594 L 438 617" stroke="#c0c8d8" stroke-width="0.8" fill="none"/>
+
+  <!-- Left coat breast pocket -->
+  <rect x="178" y="668" width="88" height="14" rx="2" fill="rgba(0,0,0,0.06)"/>
+  <!-- Pen 1 -->
+  <line x1="200" y1="652" x2="200" y2="682" stroke="#0d2b55" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="200" cy="651" r="5" fill="#0d2b55"/>
+  <!-- Pen 2 (gold) -->
+  <line x1="216" y1="650" x2="216" y2="682" stroke="#b8966a" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="216" cy="649" r="4.5" fill="#b8966a"/>
+
+  <!-- Name badge -->
+  <rect x="180" y="700" width="115" height="58" rx="5" fill="white" opacity="0.96" filter="url(#subtleShadow)"/>
+  <rect x="180" y="700" width="115" height="14" rx="5" fill="#0d2b55"/>
+  <rect x="180" y="709" width="115" height="5" fill="#0d2b55"/>
+  <text x="237" y="724" font-family="Georgia, serif" font-size="9.5" fill="#0d2b55" text-anchor="middle" font-weight="bold" letter-spacing="0.3">Dr. Felipe Ordonez</text>
+  <text x="237" y="737" font-family="Arial, sans-serif" font-size="7.5" fill="#444466" text-anchor="middle">DDS · Prosthodontics</text>
+  <text x="237" y="750" font-family="Arial, sans-serif" font-size="7" fill="#666688" text-anchor="middle">General Dentistry</text>
+
+  <!-- ===== NECK ===== -->
+  <path d="M 364 508 L 436 508 L 442 572 L 400 582 L 358 572 Z" fill="url(#skinNeck)"/>
+  <!-- Neck shadow sides -->
+  <path d="M 364 508 L 375 572 L 400 578" fill="#a86848" opacity="0.25"/>
+  <path d="M 436 508 L 425 572 L 400 578" fill="#a06040" opacity="0.2"/>
+
+  <!-- ===== HEAD ===== -->
+  <!-- Head base -->
+  <ellipse cx="400" cy="352" rx="108" ry="122" fill="url(#skin)"/>
+
+  <!-- Jaw / lower face shape -->
+  <path d="M 295 388 Q 290 428, 330 478 Q 360 506, 400 510 Q 440 506, 470 478 Q 510 428, 505 388"
+        fill="url(#skin)"/>
+
+  <!-- Subtle cheek shading -->
+  <ellipse cx="320" cy="390" rx="38" ry="25" fill="#a86040" opacity="0.10" filter="url(#softEdge)"/>
+  <ellipse cx="480" cy="390" rx="38" ry="25" fill="#a86040" opacity="0.09" filter="url(#softEdge)"/>
+
+  <!-- ===== HAIR ===== -->
+  <!-- Main hair mass -->
+  <ellipse cx="400" cy="246" rx="112" ry="70" fill="url(#hair)"/>
+  <!-- Hair top cap -->
+  <path d="M 290 308 Q 288 210, 400 200 Q 512 210, 510 308
+           L 502 268 Q 495 205, 400 198 Q 305 205, 298 268 Z" fill="url(#hair)"/>
+  <!-- Left side hair -->
+  <path d="M 292 312 L 290 420 Q 296 430, 304 408 L 308 325 Z" fill="url(#hair)"/>
+  <!-- Right side hair -->
+  <path d="M 508 312 L 510 420 Q 504 430, 496 408 L 492 325 Z" fill="url(#hair)"/>
+  <!-- Hair highlight (subtle) -->
+  <path d="M 350 215 Q 380 205, 420 210" stroke="#3a2415" stroke-width="8" fill="none" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- ===== EARS ===== -->
+  <!-- Left ear -->
+  <ellipse cx="292" cy="365" rx="15" ry="21" fill="#bf7850"/>
+  <path d="M 284 356 Q 286 365, 284 374" stroke="#a06038" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <!-- Right ear -->
+  <ellipse cx="508" cy="365" rx="15" ry="21" fill="#b87248"/>
+  <path d="M 516 356 Q 514 365, 516 374" stroke="#9a5830" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- ===== FACE FEATURES ===== -->
+
+  <!-- Brow bone shadow -->
+  <path d="M 340 322 Q 372 310, 400 316 Q 428 310, 460 322" fill="#b07048" opacity="0.12" filter="url(#softEdge)"/>
+
+  <!-- Eyebrows -->
+  <path d="M 340 318 Q 358 308, 380 311 Q 388 308, 393 314"
+        stroke="#1e1008" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <path d="M 407 314 Q 412 308, 420 311 Q 442 308, 460 318"
+        stroke="#1e1008" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Eyes -->
+  <!-- Left eye whites -->
+  <path d="M 340 340 Q 364 325, 388 340 Q 364 355, 340 340 Z" fill="white"/>
+  <!-- Left iris -->
+  <circle cx="364" cy="340" r="10" fill="#3a2010"/>
+  <circle cx="364" cy="340" r="6.5" fill="#180a04"/>
+  <circle cx="367" cy="337" r="2.8" fill="white" opacity="0.85"/>
+  <!-- Left eyelid -->
+  <path d="M 340 340 Q 364 326, 388 340" stroke="#7a4428" stroke-width="1.8" fill="none"/>
+  <!-- Left lower lid -->
+  <path d="M 341 341 Q 364 353, 387 341" stroke="#c07858" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+  <!-- Right eye whites -->
+  <path d="M 412 340 Q 436 325, 460 340 Q 436 355, 412 340 Z" fill="white"/>
+  <!-- Right iris -->
+  <circle cx="436" cy="340" r="10" fill="#3a2010"/>
+  <circle cx="436" cy="340" r="6.5" fill="#180a04"/>
+  <circle cx="439" cy="337" r="2.8" fill="white" opacity="0.85"/>
+  <!-- Right eyelid -->
+  <path d="M 412 340 Q 436 326, 460 340" stroke="#7a4428" stroke-width="1.8" fill="none"/>
+  <path d="M 413 341 Q 436 353, 459 341" stroke="#c07858" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+  <!-- Nose bridge -->
+  <path d="M 400 356 L 392 386 L 382 398" stroke="#a06038" stroke-width="1.2" fill="none" opacity="0.3"/>
+  <path d="M 400 356 L 408 386 L 418 398" stroke="#a06038" stroke-width="1.2" fill="none" opacity="0.3"/>
+  <!-- Nostril base shadow -->
+  <ellipse cx="386" cy="398" rx="9" ry="5.5" fill="#904830" opacity="0.22"/>
+  <ellipse cx="414" cy="398" rx="9" ry="5.5" fill="#904830" opacity="0.22"/>
+  <!-- Nose tip -->
+  <path d="M 378 396 Q 400 406, 422 396" stroke="#904830" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- Smile / mouth -->
+  <!-- Upper lip -->
+  <path d="M 368 422 Q 382 414, 400 418 Q 418 414, 432 422 Q 418 428, 400 426 Q 382 428, 368 422 Z"
+        fill="#a05838"/>
+  <!-- Cupids bow line -->
+  <path d="M 368 422 Q 381 414, 388 418 Q 394 412, 400 413 Q 406 412, 412 418 Q 419 414, 432 422"
+        stroke="#8a4028" stroke-width="0.8" fill="none"/>
+  <!-- Lower lip -->
+  <path d="M 368 422 Q 400 445, 432 422 Q 418 436, 400 440 Q 382 436, 368 422 Z"
+        fill="#b86848"/>
+  <!-- Teeth hint (warm smile) -->
+  <path d="M 372 426 Q 400 440, 428 426" stroke="white" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.55"/>
+  <!-- Smile lines -->
+  <path d="M 345 420 Q 350 438, 360 450" stroke="#a06038" stroke-width="1" fill="none" opacity="0.25"/>
+  <path d="M 455 420 Q 450 438, 440 450" stroke="#a06038" stroke-width="1" fill="none" opacity="0.25"/>
+
+  <!-- Chin highlight -->
+  <ellipse cx="400" cy="472" rx="28" ry="14" fill="#d89870" opacity="0.18" filter="url(#softEdge)"/>
+
+  <!-- ===== BOTTOM NAMEPLATE ===== -->
+  <rect x="0" y="900" width="800" height="100" fill="rgba(4,13,26,0.75)"/>
+  <line x1="80" y1="915" x2="720" y2="915" stroke="url(#goldAccent)" stroke-width="0.9"/>
+  <text x="400" y="948" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#c9a87c"
+        text-anchor="middle" letter-spacing="3.5" font-weight="normal">DR. FELIPE ORDONEZ</text>
+  <text x="400" y="970" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="rgba(245,237,216,0.62)"
+        text-anchor="middle" letter-spacing="2">DDS  ·  PROSTHODONTICS  ·  GENERAL DENTISTRY</text>
+  <line x1="80" y1="985" x2="720" y2="985" stroke="url(#goldAccent)" stroke-width="0.9"/>
+</svg>

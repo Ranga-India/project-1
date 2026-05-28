@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="wallBG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f0f8"/>
+      <stop offset="100%" stop-color="#d8e4f0"/>
+    </linearGradient>
+    <linearGradient id="backWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dce8f4"/>
+      <stop offset="100%" stop-color="#c8d8ec"/>
+    </linearGradient>
+    <linearGradient id="floorG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d0dce8"/>
+      <stop offset="100%" stop-color="#b8c8dc"/>
+    </linearGradient>
+    <linearGradient id="chairBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f4f8"/>
+      <stop offset="100%" stop-color="#d8e0ea"/>
+    </linearGradient>
+    <linearGradient id="chairSeat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8edf5"/>
+      <stop offset="100%" stop-color="#d0daea"/>
+    </linearGradient>
+    <linearGradient id="chairBase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3560"/>
+      <stop offset="100%" stop-color="#0d2044"/>
+    </linearGradient>
+    <linearGradient id="lightArm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8d0dc"/>
+      <stop offset="100%" stop-color="#a8b4c4"/>
+    </linearGradient>
+    <linearGradient id="lightHead" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8edf5"/>
+      <stop offset="100%" stop-color="#c0ccd8"/>
+    </linearGradient>
+    <radialGradient id="lightBeam" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffce8" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#fff8d0" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fff8d0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lampFace" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#fffce8"/>
+      <stop offset="100%" stop-color="#e8edf5"/>
+    </radialGradient>
+    <linearGradient id="monitorG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1e2c"/>
+      <stop offset="100%" stop-color="#0e1220"/>
+    </linearGradient>
+    <linearGradient id="cabinetG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f4f8"/>
+      <stop offset="100%" stop-color="#d8e0ea"/>
+    </linearGradient>
+    <linearGradient id="trayG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8d0dc"/>
+      <stop offset="100%" stop-color="#a8b4c4"/>
+    </linearGradient>
+    <linearGradient id="windowG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cce0f8"/>
+      <stop offset="100%" stop-color="#e8f4ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="s4">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="rgba(0,0,0,0.18)"/>
+    </filter>
+    <filter id="s2">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+    <filter id="blur4">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- ===== ROOM STRUCTURE ===== -->
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="1200" height="180" fill="#eef3f8"/>
+  <!-- Back wall -->
+  <polygon points="180,155 1020,155 1020,530 180,530" fill="url(#backWall)"/>
+  <!-- Left wall -->
+  <polygon points="0,0 180,155 180,530 0,800" fill="#d8e4f0"/>
+  <!-- Right wall -->
+  <polygon points="1200,0 1020,155 1020,530 1200,800" fill="#ccd8ec"/>
+  <!-- Floor -->
+  <polygon points="0,800 1200,800 1020,530 180,530" fill="url(#floorG)"/>
+
+  <!-- Floor tile grid -->
+  <line x1="180" y1="530" x2="0"    y2="800" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <line x1="330" y1="530" x2="115"  y2="800" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <line x1="480" y1="530" x2="310"  y2="800" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <line x1="630" y1="530" x2="500"  y2="800" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <line x1="780" y1="530" x2="700"  y2="800" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <line x1="930" y1="530" x2="900"  y2="800" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <line x1="1020" y1="530" x2="1085" y2="800" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <line x1="180"  y1="600" x2="1020" y2="600" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <line x1="160"  y1="670" x2="1040" y2="670" stroke="rgba(255,255,255,0.2)"  stroke-width="1"/>
+  <line x1="130"  y1="740" x2="1070" y2="740" stroke="rgba(255,255,255,0.2)"  stroke-width="1"/>
+
+  <!-- Ceiling trim -->
+  <rect x="0" y="0" width="1200" height="22" fill="#e4edf5"/>
+  <polygon points="180,155 1020,155 1024,148 176,148" fill="#dce8f2"/>
+
+  <!-- Navy accent stripe on back wall (wainscoting top) -->
+  <polygon points="180,440 1020,440 1020,460 180,460" fill="#0d2b55" opacity="0.12"/>
+  <polygon points="180,458 1020,458 1020,463 180,463" fill="#0d2b55" opacity="0.18"/>
+
+  <!-- ===== WINDOW (left side) ===== -->
+  <rect x="205" y="180" width="160" height="220" rx="3" fill="url(#windowG)" filter="url(#s4)"/>
+  <!-- Blinds -->
+  <rect x="206" y="181" width="158" height="218" rx="2" fill="none"/>
+  <line x1="207" y1="195" x2="363" y2="195" stroke="#c8d8e8" stroke-width="2"/>
+  <line x1="207" y1="210" x2="363" y2="210" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="225" x2="363" y2="225" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="240" x2="363" y2="240" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="255" x2="363" y2="255" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="270" x2="363" y2="270" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="285" x2="363" y2="285" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="300" x2="363" y2="300" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="315" x2="363" y2="315" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="330" x2="363" y2="330" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="345" x2="363" y2="345" stroke="#c8d8e8" stroke-width="1.5"/>
+  <line x1="207" y1="360" x2="363" y2="360" stroke="#c8d8e8" stroke-width="1.5"/>
+  <!-- Window frame -->
+  <rect x="203" y="178" width="164" height="224" rx="3" fill="none" stroke="#b8c8d8" stroke-width="4"/>
+  <line x1="285" y1="180" x2="285" y2="400" stroke="#b8c8d8" stroke-width="3"/>
+  <!-- Sill -->
+  <rect x="200" y="400" width="170" height="10" rx="2" fill="#c8d4e0"/>
+  <!-- Window light on floor -->
+  <polygon points="205,400 367,400 440,530 130,530" fill="rgba(220,240,255,0.15)"/>
+
+  <!-- ===== CABINETS (back wall right) ===== -->
+  <!-- Upper cabinet -->
+  <rect x="740" y="175" width="260" height="175" rx="5" fill="url(#cabinetG)" filter="url(#s2)"/>
+  <line x1="870" y1="177" x2="870" y2="348" stroke="#c8d4e0" stroke-width="1.5"/>
+  <!-- Cabinet doors -->
+  <rect x="744" y="178" width="122" height="169" rx="4" fill="#e8eef6"/>
+  <rect x="870" y="178" width="126" height="169" rx="4" fill="#e0e8f2"/>
+  <!-- Handles -->
+  <rect x="857" y="258" width="24" height="6" rx="3" fill="#a8b4c4"/>
+  <rect x="874" y="258" width="24" height="6" rx="3" fill="#a0acbc"/>
+  <!-- Cabinet top edge -->
+  <rect x="736" y="171" width="276" height="10" rx="3" fill="#d0dcea"/>
+
+  <!-- Counter / worktop -->
+  <rect x="720" y="348" width="292" height="20" rx="3" fill="#c8d4e0" filter="url(#s2)"/>
+  <!-- Under counter drawers -->
+  <rect x="724" y="370" width="280" height="130" rx="4" fill="url(#cabinetG)"/>
+  <rect x="726" y="373" width="276" height="38" rx="3" fill="#e8eef6"/>
+  <rect x="726" y="415" width="276" height="38" rx="3" fill="#e4eaf4"/>
+  <rect x="726" y="457" width="276" height="38" rx="3" fill="#e0e6f0"/>
+  <!-- Drawer handles -->
+  <rect x="846" y="389" width="36" height="5" rx="2.5" fill="#a8b4c4"/>
+  <rect x="846" y="431" width="36" height="5" rx="2.5" fill="#a0acbc"/>
+  <rect x="846" y="473" width="36" height="5" rx="2.5" fill="#98a4b8"/>
+
+  <!-- Counter items -->
+  <!-- Sterilization tray container -->
+  <rect x="750" y="330" width="55" height="22" rx="3" fill="#d8e4f0"/>
+  <rect x="752" y="322" width="51" height="10" rx="2" fill="#c0ccd8"/>
+  <!-- Small bottles/containers -->
+  <rect x="820" y="328" width="16" height="24" rx="4" fill="#b8966a" opacity="0.7"/>
+  <rect x="842" y="330" width="14" height="22" rx="4" fill="#0d2b55" opacity="0.6"/>
+  <rect x="862" y="328" width="16" height="24" rx="4" fill="#b8966a" opacity="0.5"/>
+  <!-- Sink area -->
+  <rect x="895" y="330" width="90" height="22" rx="4" fill="#c0ccd8"/>
+  <ellipse cx="940" cy="341" rx="35" ry="11" fill="#a8b8c8"/>
+  <ellipse cx="940" cy="341" rx="28" ry="8" fill="#8098b0"/>
+  <!-- Tap -->
+  <rect x="937" y="320" width="6" height="22" rx="3" fill="#b0b8c4"/>
+  <rect x="930" y="318" width="20" height="5" rx="2.5" fill="#b0b8c4"/>
+
+  <!-- ===== INSTRUMENT TRAY (right of chair) ===== -->
+  <!-- Tray arm -->
+  <rect x="848" y="400" width="10" height="120" rx="4" fill="url(#trayG)"/>
+  <rect x="838" y="395" width="30" height="10" rx="3" fill="url(#trayG)"/>
+  <!-- Tray surface -->
+  <rect x="810" y="382" width="120" height="18" rx="4" fill="url(#trayG)" filter="url(#s2)"/>
+  <!-- Instruments on tray -->
+  <!-- Mirror -->
+  <line x1="824" y1="375" x2="824" y2="382" stroke="#c8d0dc" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="824" cy="373" r="5" fill="#d8e0ec" stroke="#b8c4d0" stroke-width="1"/>
+  <!-- Explorer -->
+  <line x1="840" y1="372" x2="840" y2="382" stroke="#c0c8d8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 840 372 Q 843 367, 845 365" stroke="#c0c8d8" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Probe -->
+  <line x1="856" y1="372" x2="856" y2="382" stroke="#c8d0dc" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Scaler -->
+  <line x1="870" y1="372" x2="870" y2="382" stroke="#b8c4d0" stroke-width="3" stroke-linecap="round"/>
+  <!-- Cotton roll container -->
+  <rect x="890" y="370" width="22" height="14" rx="3" fill="#e8edf5"/>
+  <!-- Gauze -->
+  <rect x="916" y="372" width="10" height="10" rx="1" fill="white" opacity="0.8"/>
+
+  <!-- ===== ARTICULATING DENTAL LIGHT ===== -->
+  <!-- Ceiling mount -->
+  <rect x="575" y="0" width="50" height="22" rx="4" fill="#c0ccd8"/>
+  <!-- Main arm (upper) -->
+  <rect x="595" y="18" width="10" height="90" rx="4" fill="url(#lightArm)"/>
+  <circle cx="600" cy="108" r="12" fill="#b8c4d0"/>
+  <!-- Secondary arm (angled toward chair) -->
+  <path d="M 600 108 Q 570 160, 540 210" stroke="url(#lightArm)" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <circle cx="540" cy="210" r="11" fill="#b0bcc8"/>
+  <!-- Third arm -->
+  <path d="M 540 210 Q 510 255, 505 300" stroke="url(#lightArm)" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <!-- Light head housing -->
+  <ellipse cx="505" cy="315" rx="62" ry="42" fill="url(#lightHead)" filter="url(#s4)"/>
+  <ellipse cx="505" cy="318" rx="55" ry="36" fill="url(#lampFace)"/>
+  <!-- Inner light array (LED circles) -->
+  <circle cx="505" cy="318" r="24" fill="#fffce8" opacity="0.95"/>
+  <circle cx="490" cy="310" r="6" fill="white" opacity="0.9"/>
+  <circle cx="520" cy="310" r="6" fill="white" opacity="0.9"/>
+  <circle cx="505" cy="304" r="6" fill="white" opacity="0.9"/>
+  <circle cx="490" cy="328" r="6" fill="white" opacity="0.9"/>
+  <circle cx="520" cy="328" r="6" fill="white" opacity="0.9"/>
+  <circle cx="505" cy="333" r="6" fill="white" opacity="0.9"/>
+  <!-- Handle on light -->
+  <rect x="535" y="310" width="22" height="8" rx="4" fill="#a8b4c0"/>
+  <!-- Light beam on patient area -->
+  <ellipse cx="560" cy="540" rx="130" ry="50" fill="url(#lightBeam)" opacity="0.7" filter="url(#blur4)"/>
+
+  <!-- ===== DENTAL CHAIR ===== -->
+  <!-- Chair base / hydraulic post -->
+  <rect x="470" y="580" width="150" height="30" rx="6" fill="url(#chairBase)" filter="url(#s4)"/>
+  <rect x="510" y="520" width="70" height="70" rx="6" fill="url(#chairBase)"/>
+  <!-- Base plate -->
+  <ellipse cx="545" cy="608" rx="100" ry="14" fill="#0d2044" opacity="0.6" filter="url(#blur4)"/>
+
+  <!-- Chair back (reclined) -->
+  <path d="M 380 368 Q 378 360, 395 352 L 730 352 Q 745 360, 742 370 L 742 432 Q 742 448, 728 452 L 394 452 Q 380 448, 380 432 Z"
+        fill="url(#chairBody)" filter="url(#s4)"/>
+  <!-- Back cushion detail -->
+  <path d="M 385 368 Q 384 362, 398 356 L 726 356 Q 738 362, 737 370 L 737 430 Q 737 444, 725 447 L 397 447 Q 385 444, 385 430 Z"
+        fill="url(#chairSeat)"/>
+  <!-- Headrest -->
+  <rect x="360" y="352" width="58" height="100" rx="12" fill="url(#chairBody)" filter="url(#s2)"/>
+  <rect x="366" y="358" width="46" height="88" rx="10" fill="url(#chairSeat)"/>
+  <!-- Neck support -->
+  <rect x="374" y="396" width="30" height="10" rx="3" fill="#c8d4e0"/>
+
+  <!-- Chair seat (horizontal) -->
+  <rect x="474" y="450" width="260" height="80" rx="12" fill="url(#chairBody)" filter="url(#s2)"/>
+  <rect x="480" y="456" width="248" height="68" rx="10" fill="url(#chairSeat)"/>
+
+  <!-- Footrest -->
+  <path d="M 716 450 Q 740 455, 745 480 L 745 520 Q 745 535, 730 540 L 690 540 Q 675 535, 674 520 L 674 480 Q 674 460, 716 450 Z"
+        fill="url(#chairBody)" filter="url(#s2)"/>
+  <path d="M 718 455 Q 736 460, 740 480 L 740 518 Q 740 530, 726 534 L 693 534 Q 680 530, 679 518 L 679 480 Q 680 462, 718 455 Z"
+        fill="url(#chairSeat)"/>
+
+  <!-- Armrest left -->
+  <rect x="390" y="450" width="24" height="75" rx="8" fill="#c8d4e0" filter="url(#s2)"/>
+  <rect x="380" y="448" width="44" height="16" rx="6" fill="#c0ccd8"/>
+  <!-- Armrest right -->
+  <rect x="720" y="450" width="24" height="75" rx="8" fill="#c8d4e0" filter="url(#s2)"/>
+  <rect x="714" y="448" width="44" height="16" rx="6" fill="#c0ccd8"/>
+
+  <!-- Chair cushion seam lines -->
+  <line x1="480" y1="480" x2="728" y2="480" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+  <line x1="480" y1="498" x2="728" y2="498" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+
+  <!-- ===== MONITOR ON ARM (right of chair) ===== -->
+  <!-- Arm post -->
+  <rect x="860" y="450" width="10" height="80" rx="4" fill="url(#trayG)"/>
+  <rect x="840" y="444" width="50" height="10" rx="4" fill="url(#trayG)"/>
+  <!-- Monitor -->
+  <rect x="856" y="326" width="148" height="122" rx="6" fill="url(#monitorG)" filter="url(#s4)"/>
+  <rect x="862" y="332" width="136" height="108" rx="4" fill="#0a1830"/>
+  <!-- X-ray image on screen -->
+  <rect x="864" y="334" width="132" height="104" rx="3" fill="#0d1e30"/>
+  <!-- Teeth X-ray illustration -->
+  <path d="M 880 380 Q 880 368, 892 364 Q 904 360, 904 374 Q 904 388, 892 392 Q 880 396, 880 380 Z"
+        fill="#3a5878" opacity="0.8"/>
+  <path d="M 908 376 Q 908 364, 920 360 Q 930 356, 932 370 Q 934 384, 922 390 Q 910 394, 908 376 Z"
+        fill="#3a5878" opacity="0.8"/>
+  <path d="M 934 374 Q 934 362, 946 360 Q 958 358, 958 374 Q 958 390, 946 394 Q 934 396, 934 374 Z"
+        fill="#3a5878" opacity="0.8"/>
+  <path d="M 960 376 Q 960 364, 972 362 Q 982 360, 982 374 Q 982 388, 972 392 Q 960 396, 960 376 Z"
+        fill="#3a5878" opacity="0.8"/>
+  <!-- Root lines -->
+  <line x1="892" y1="390" x2="888" y2="410" stroke="#2a4060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="892" y1="390" x2="896" y2="412" stroke="#2a4060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="921" y1="388" x2="918" y2="408" stroke="#2a4060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="946" y1="392" x2="943" y2="412" stroke="#2a4060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="946" y1="392" x2="949" y2="414" stroke="#2a4060" stroke-width="2" stroke-linecap="round"/>
+  <!-- Screen status bar -->
+  <rect x="862" y="332" width="136" height="14" rx="4" fill="#0d2b55"/>
+  <text x="930" y="342" font-family="Arial, sans-serif" font-size="7" fill="#b8966a" text-anchor="middle" letter-spacing="1">DIGITAL X-RAY</text>
+  <!-- Monitor stand -->
+  <rect x="920" y="448" width="10" height="8" rx="2" fill="#282838"/>
+  <rect x="906" y="454" width="38" height="6" rx="2" fill="#1e2030"/>
+
+  <!-- ===== CEILING LIGHT ===== -->
+  <rect x="500" y="0" width="200" height="18" rx="3" fill="#e0eaf4"/>
+  <rect x="510" y="14" width="180" height="10" rx="2" fill="#f5faff" opacity="0.95"/>
+  <!-- Overhead glow -->
+  <ellipse cx="600" cy="60" rx="180" ry="60" fill="rgba(240,248,255,0.25)" filter="url(#blur4)"/>
+
+  <!-- ===== FLOOR SHADOW under chair ===== -->
+  <ellipse cx="560" cy="618" rx="240" ry="22" fill="rgba(0,0,0,0.14)" filter="url(#blur4)"/>
+
+  <!-- ===== BIOHAZARD WASTE BIN ===== -->
+  <rect x="200" y="680" width="45" height="60" rx="6" fill="#e8edf5" filter="url(#s2)"/>
+  <rect x="203" y="683" width="39" height="15" rx="3" fill="#0d2b55"/>
+  <!-- Biohazard symbol (simplified) -->
+  <circle cx="222" cy="725" r="12" fill="none" stroke="#e85540" stroke-width="2" opacity="0.7"/>
+  <text x="222" y="729" font-family="Arial, sans-serif" font-size="12" fill="#e85540" text-anchor="middle" opacity="0.7">☣</text>
+
+  <!-- ===== AMBIENT OVERLAY ===== -->
+  <rect x="0" y="0" width="1200" height="800" fill="rgba(220,235,250,0.04)"/>
+</svg>

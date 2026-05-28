@@ -1,0 +1,415 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="roomBG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1828"/>
+      <stop offset="60%" stop-color="#0d1e32"/>
+      <stop offset="100%" stop-color="#061020"/>
+    </linearGradient>
+    <linearGradient id="backW" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2040"/>
+      <stop offset="100%" stop-color="#081830"/>
+    </linearGradient>
+    <linearGradient id="floorTech" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e1e30"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+    <linearGradient id="machineBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8e0ec"/>
+      <stop offset="100%" stop-color="#a8b4c8"/>
+    </linearGradient>
+    <linearGradient id="machineArm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c0cad8"/>
+      <stop offset="100%" stop-color="#98a4b8"/>
+    </linearGradient>
+    <linearGradient id="screenG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#081428"/>
+      <stop offset="100%" stop-color="#050e1e"/>
+    </linearGradient>
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b8966a" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#b8966a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#b8966a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#1a4888" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a1830" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="scannerGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#2060a8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a1830" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ceilingGlow" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#1a3a60" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a1828" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="floorRefl" cx="50%" cy="100%" r="50%">
+      <stop offset="0%" stop-color="#1a3060" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a1428" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cbctBase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3050"/>
+      <stop offset="100%" stop-color="#0d1e38"/>
+    </linearGradient>
+    <linearGradient id="cbctArch" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8d4e8"/>
+      <stop offset="50%" stop-color="#e8f0f8"/>
+      <stop offset="100%" stop-color="#c0cce0"/>
+    </linearGradient>
+    <linearGradient id="chairTech" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2e4a"/>
+      <stop offset="100%" stop-color="#0e1e30"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow6">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="glow20">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="s4t">
+      <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="rgba(0,40,100,0.4)"/>
+    </filter>
+    <filter id="s2t">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,30,80,0.35)"/>
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="68" y="155" width="296" height="230" rx="4"/>
+    </clipPath>
+    <clipPath id="screen2Clip">
+      <rect x="820" y="140" width="310" height="240" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- ===== ROOM BACKGROUND ===== -->
+  <rect width="1200" height="800" fill="url(#roomBG)"/>
+  <rect width="1200" height="800" fill="url(#ceilingGlow)"/>
+  <rect width="1200" height="800" fill="url(#floorRefl)"/>
+
+  <!-- Back wall -->
+  <polygon points="180,140 1020,140 1020,520 180,520" fill="url(#backW)"/>
+  <!-- Left wall -->
+  <polygon points="0,0 180,140 180,520 0,800" fill="#0b1828"/>
+  <!-- Right wall -->
+  <polygon points="1200,0 1020,140 1020,520 1200,800" fill="#09141e"/>
+  <!-- Floor -->
+  <polygon points="0,800 1200,800 1020,520 180,520" fill="url(#floorTech)"/>
+
+  <!-- Floor reflective lines -->
+  <line x1="180" y1="520" x2="0"    y2="800" stroke="rgba(30,80,160,0.15)" stroke-width="1"/>
+  <line x1="350" y1="520" x2="120"  y2="800" stroke="rgba(30,80,160,0.10)" stroke-width="1"/>
+  <line x1="520" y1="520" x2="310"  y2="800" stroke="rgba(30,80,160,0.08)" stroke-width="1"/>
+  <line x1="690" y1="520" x2="500"  y2="800" stroke="rgba(30,80,160,0.08)" stroke-width="1"/>
+  <line x1="860" y1="520" x2="710"  y2="800" stroke="rgba(30,80,160,0.08)" stroke-width="1"/>
+  <line x1="1020" y1="520" x2="1090" y2="800" stroke="rgba(30,80,160,0.10)" stroke-width="1"/>
+  <line x1="180" y1="590" x2="1020" y2="590" stroke="rgba(30,80,160,0.08)" stroke-width="1"/>
+  <line x1="160" y1="660" x2="1040" y2="660" stroke="rgba(30,80,160,0.07)" stroke-width="1"/>
+  <line x1="130" y1="730" x2="1070" y2="730" stroke="rgba(30,80,160,0.07)" stroke-width="1"/>
+
+  <!-- Ceiling trim accent -->
+  <rect x="0" y="0" width="1200" height="20" fill="#0d2040" opacity="0.8"/>
+  <!-- Subtle gold ceiling strip -->
+  <line x1="0" y1="20" x2="1200" y2="20" stroke="#b8966a" stroke-width="0.8" opacity="0.35"/>
+  <polygon points="180,140 1020,140 1026,133 174,133" fill="#0e2244" opacity="0.7"/>
+
+  <!-- Ambient glow from screens -->
+  <ellipse cx="220" cy="270" rx="220" ry="160" fill="rgba(20,80,180,0.12)" filter="url(#glow20)"/>
+  <ellipse cx="975" cy="260" rx="240" ry="170" fill="rgba(20,80,180,0.12)" filter="url(#glow20)"/>
+
+  <!-- ===== LEFT MONITOR WORKSTATION ===== -->
+  <!-- Desk -->
+  <rect x="30" y="440" width="360" height="22" rx="4" fill="#1a2e50" filter="url(#s4t)"/>
+  <rect x="20" y="460" width="380" height="120" rx="5" fill="#0f1e38"/>
+  <rect x="22" y="462" width="376" height="4" fill="#b8966a" opacity="0.4"/>
+  <!-- Desk leg -->
+  <rect x="55" y="578" width="16" height="60" rx="3" fill="#0d1830"/>
+  <rect x="349" y="578" width="16" height="60" rx="3" fill="#0d1830"/>
+
+  <!-- Monitor 1 (main - large) -->
+  <rect x="60" y="148" width="308" height="298" rx="8" fill="#1a1e30" filter="url(#s4t)"/>
+  <rect x="64" y="152" width="300" height="288" rx="6" fill="url(#screenG)"/>
+  <!-- Screen glow -->
+  <rect x="64" y="152" width="300" height="288" rx="6" fill="url(#screenGlow)" opacity="0.6"/>
+
+  <!-- Screen content: 3D tooth scan / CBCT view -->
+  <!-- Status bar -->
+  <rect x="64" y="152" width="300" height="20" rx="6" fill="#0d2b55"/>
+  <rect x="64" y="165" width="300" height="7" rx="0" fill="#0d2b55"/>
+  <text x="214" y="165" font-family="Arial, sans-serif" font-size="8" fill="#b8966a" text-anchor="middle" letter-spacing="1.5">CBCT 3D IMAGING SUITE</text>
+
+  <!-- 3D tooth model (stylized) -->
+  <ellipse cx="214" cy="295" rx="85" ry="95" fill="rgba(40,100,200,0.15)"/>
+  <!-- Tooth crown 3D shape -->
+  <path d="M 165 250 Q 160 220, 180 210 Q 200 200, 214 208 Q 228 200, 248 210 Q 268 220, 263 250
+           Q 258 280, 248 295 Q 238 308, 214 314 Q 190 308, 180 295 Q 170 280, 165 250 Z"
+        fill="rgba(100,180,255,0.5)" stroke="#60b0ff" stroke-width="1.5"/>
+  <!-- Enamel highlight -->
+  <path d="M 195 215 Q 214 208, 234 215 Q 248 225, 248 240 Q 235 228, 214 224 Q 193 228, 180 240 Q 180 225, 195 215 Z"
+        fill="rgba(200,230,255,0.6)"/>
+  <!-- Root section -->
+  <path d="M 185 310 Q 178 330, 185 360 Q 192 375, 200 370 L 200 358 Q 196 345, 200 328 Z"
+        fill="rgba(80,140,220,0.4)" stroke="#4090e0" stroke-width="1"/>
+  <path d="M 243 310 Q 250 330, 243 360 Q 236 375, 228 370 L 228 358 Q 232 345, 228 328 Z"
+        fill="rgba(80,140,220,0.4)" stroke="#4090e0" stroke-width="1"/>
+  <path d="M 214 312 Q 214 335, 210 365 Q 210 378, 214 380 Q 218 378, 218 365 Q 214 335, 214 312 Z"
+        fill="rgba(80,140,220,0.4)" stroke="#4090e0" stroke-width="1"/>
+
+  <!-- Measurement lines on screen -->
+  <line x1="115" y1="248" x2="165" y2="248" stroke="#60e0ff" stroke-width="0.8" opacity="0.7"/>
+  <line x1="263" y1="248" x2="313" y2="248" stroke="#60e0ff" stroke-width="0.8" opacity="0.7"/>
+  <text x="100" y="252" font-family="Arial, sans-serif" font-size="7" fill="#60e0ff" text-anchor="middle" opacity="0.8">21.4</text>
+  <text x="328" y="252" font-family="Arial, sans-serif" font-size="7" fill="#60e0ff" text-anchor="middle" opacity="0.8">mm</text>
+  <line x1="214" y1="150" x2="214" y2="208" stroke="#60e0ff" stroke-width="0.8" opacity="0.5" stroke-dasharray="4,3"/>
+  <line x1="214" y1="314" x2="214" y2="420" stroke="#60e0ff" stroke-width="0.8" opacity="0.5" stroke-dasharray="4,3"/>
+
+  <!-- Grid overlay on screen -->
+  <line x1="64"  y1="210" x2="364" y2="210" stroke="rgba(80,160,255,0.12)" stroke-width="0.8"/>
+  <line x1="64"  y1="260" x2="364" y2="260" stroke="rgba(80,160,255,0.12)" stroke-width="0.8"/>
+  <line x1="64"  y1="310" x2="364" y2="310" stroke="rgba(80,160,255,0.12)" stroke-width="0.8"/>
+  <line x1="64"  y1="360" x2="364" y2="360" stroke="rgba(80,160,255,0.12)" stroke-width="0.8"/>
+  <line x1="114" y1="172" x2="114" y2="440" stroke="rgba(80,160,255,0.12)" stroke-width="0.8"/>
+  <line x1="164" y1="172" x2="164" y2="440" stroke="rgba(80,160,255,0.12)" stroke-width="0.8"/>
+  <line x1="264" y1="172" x2="264" y2="440" stroke="rgba(80,160,255,0.12)" stroke-width="0.8"/>
+  <line x1="314" y1="172" x2="314" y2="440" stroke="rgba(80,160,255,0.12)" stroke-width="0.8"/>
+
+  <!-- Data panels bottom of screen -->
+  <rect x="68" y="400" width="88" height="36" rx="3" fill="rgba(13,43,85,0.7)"/>
+  <text x="112" y="413" font-family="Arial, sans-serif" font-size="6.5" fill="#b8966a" text-anchor="middle">BONE DENSITY</text>
+  <rect x="70" y="417" width="60" height="5" rx="2" fill="#4090e0" opacity="0.6"/>
+  <rect x="70" y="425" width="45" height="4" rx="2" fill="#b8966a" opacity="0.5"/>
+
+  <rect x="162" y="400" width="88" height="36" rx="3" fill="rgba(13,43,85,0.7)"/>
+  <text x="206" y="413" font-family="Arial, sans-serif" font-size="6.5" fill="#b8966a" text-anchor="middle">ROOT LENGTH</text>
+  <text x="206" y="427" font-family="Arial, sans-serif" font-size="9" fill="#60e0ff" text-anchor="middle">14.2 mm</text>
+
+  <rect x="256" y="400" width="104" height="36" rx="3" fill="rgba(13,43,85,0.7)"/>
+  <text x="308" y="413" font-family="Arial, sans-serif" font-size="6.5" fill="#b8966a" text-anchor="middle">IMPLANT GUIDE</text>
+  <circle cx="308" cy="427" r="7" fill="none" stroke="#60ff80" stroke-width="1.5"/>
+  <text x="308" y="430" font-family="Arial, sans-serif" font-size="8" fill="#60ff80" text-anchor="middle">✓</text>
+
+  <!-- Monitor bezel bottom -->
+  <rect x="60" y="440" width="308" height="14" rx="6" fill="#1a1e30"/>
+  <circle cx="214" cy="447" r="3" fill="#2a3050"/>
+  <!-- Monitor stand -->
+  <rect x="200" y="454" width="28" height="16" rx="3" fill="#141828"/>
+  <rect x="178" y="468" width="72" height="8" rx="3" fill="#101420"/>
+
+  <!-- Keyboard -->
+  <rect x="95" y="476" width="230" height="52" rx="5" fill="#141828" filter="url(#s2t)"/>
+  <rect x="98" y="479" width="224" height="44" rx="4" fill="#101420"/>
+  <!-- Key rows -->
+  <rect x="102" y="482" width="216" height="10" rx="2" fill="#0e1828"/>
+  <rect x="102" y="495" width="216" height="10" rx="2" fill="#0e1828"/>
+  <rect x="102" y="508" width="216" height="10" rx="2" fill="#0e1828"/>
+  <!-- Key highlights -->
+  <line x1="112" y1="482" x2="112" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="126" y1="482" x2="126" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="140" y1="482" x2="140" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="154" y1="482" x2="154" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="168" y1="482" x2="168" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="182" y1="482" x2="182" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="196" y1="482" x2="196" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="210" y1="482" x2="210" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="224" y1="482" x2="224" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="238" y1="482" x2="238" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="252" y1="482" x2="252" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="266" y1="482" x2="266" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="280" y1="482" x2="280" y2="492" stroke="#1e304a" stroke-width="1"/>
+  <line x1="294" y1="482" x2="294" y2="492" stroke="#1e304a" stroke-width="1"/>
+
+  <!-- ===== CBCT / PANORAMIC SCANNER (center) ===== -->
+  <!-- Floor base -->
+  <ellipse cx="600" cy="738" rx="130" ry="22" fill="#0a1428" opacity="0.8"/>
+  <rect x="530" y="628" width="140" height="120" rx="8" fill="url(#cbctBase)" filter="url(#s4t)"/>
+  <rect x="534" y="632" width="132" height="6" rx="3" fill="#b8966a" opacity="0.4"/>
+  <!-- Control panel on base -->
+  <rect x="545" y="645" width="110" height="65" rx="4" fill="#0e1e38"/>
+  <rect x="548" y="648" width="104" height="18" rx="2" fill="#0d2b55"/>
+  <text x="600" y="660" font-family="Arial, sans-serif" font-size="7" fill="#b8966a" text-anchor="middle" letter-spacing="1">SCANNER CONTROLS</text>
+  <!-- Control buttons -->
+  <circle cx="563" cy="680" r="6" fill="#2060a0" opacity="0.9"/>
+  <circle cx="583" cy="680" r="6" fill="#60a820" opacity="0.9"/>
+  <circle cx="603" cy="680" r="6" fill="#b8966a" opacity="0.9"/>
+  <circle cx="623" cy="680" r="6" fill="#e84040" opacity="0.7"/>
+  <circle cx="643" cy="680" r="6" fill="#2060a0" opacity=" 0.9"/>
+  <!-- LED indicator strip -->
+  <rect x="548" y="696" width="104" height="6" rx="3" fill="#0a1020"/>
+  <rect x="548" y="696" width="72"  height="6" rx="3" fill="#60a820" opacity="0.8"/>
+
+  <!-- Vertical column -->
+  <rect x="572" y="340" width="56" height="295" rx="6" fill="url(#machineBody)" filter="url(#s4t)"/>
+  <rect x="578" y="345" width="44" height="285" rx="4" fill="#c8d4e8"/>
+  <!-- Column accent stripe -->
+  <rect x="578" y="345" width="44" height="4" rx="2" fill="#b8966a" opacity="0.5"/>
+  <rect x="578" y="624" width="44" height="4" rx="2" fill="#b8966a" opacity="0.5"/>
+
+  <!-- CBCT rotating arch -->
+  <!-- Arch is a large C-shape that rotates around the patient's head -->
+  <!-- Bottom arch arm -->
+  <path d="M 600 340 L 600 295" stroke="url(#machineArm)" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <!-- Main circular arch -->
+  <path d="M 600 295 A 195 195 0 1 1 600 295.01" stroke="#c8d4e8" stroke-width="22" fill="none" stroke-linecap="round" opacity="0"/>
+  <!-- Arch as thick C-shape drawn manually -->
+  <!-- Top of arch -->
+  <rect x="492" y="160" width="216" height="26" rx="13" fill="url(#cbctArch)" filter="url(#s4t)"/>
+  <!-- Left vertical of arch -->
+  <rect x="492" y="168" width="26" height="160" rx="13" fill="url(#cbctArch)"/>
+  <!-- Right vertical of arch -->
+  <rect x="682" y="168" width="26" height="160" rx="13" fill="url(#cbctArch)"/>
+  <!-- Bottom connectors to column -->
+  <path d="M 492 328 Q 492 345, 510 348 L 572 348" stroke="#b8c4d8" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <path d="M 708 328 Q 708 345, 690 348 L 628 348" stroke="#b8c4d8" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+  <!-- Source unit on top of arch -->
+  <rect x="538" y="143" width="124" height="32" rx="8" fill="#d8e4f0" filter="url(#s4t)"/>
+  <rect x="544" y="148" width="112" height="20" rx="5" fill="#c8d4e8"/>
+  <!-- X-ray source indicator -->
+  <circle cx="600" cy="158" r="7" fill="#e84040" opacity="0.8"/>
+  <circle cx="600" cy="158" r="4" fill="#ff6060"/>
+  <text x="600" y="161" font-family="Arial, sans-serif" font-size="5" fill="white" text-anchor="middle">X</text>
+
+  <!-- Detector unit at bottom of arch gap -->
+  <rect x="538" y="318" width="124" height="28" rx="7" fill="#d0dce8" filter="url(#s2t)"/>
+  <rect x="544" y="322" width="112" height="18" rx="4" fill="#c0ccd8"/>
+  <!-- Detector active indicator -->
+  <rect x="548" y="326" width="80" height="8" rx="3" fill="#0a1020"/>
+  <rect x="548" y="326" width="56" height="8" rx="3" fill="#2090e0" opacity="0.7"/>
+
+  <!-- Scanning beam effect -->
+  <ellipse cx="600" cy="240" rx="88" ry="88" fill="none" stroke="#2090e0" stroke-width="1" opacity="0.3" stroke-dasharray="6,4"/>
+  <ellipse cx="600" cy="240" rx="60" ry="60" fill="rgba(32,144,224,0.06)"/>
+  <!-- Beam lines -->
+  <line x1="600" y1="158" x2="560" y2="318" stroke="rgba(32,144,224,0.15)" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="600" y1="158" x2="640" y2="318" stroke="rgba(32,144,224,0.15)" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Patient chin rest -->
+  <rect x="565" y="282" width="70" height="12" rx="6" fill="#e8eef6"/>
+  <rect x="565" y="292" width="70" height="5" rx="3" fill="#d0dcea"/>
+  <!-- Bite block -->
+  <rect x="582" y="270" width="36" height="16" rx="4" fill="#b8d0e8"/>
+
+  <!-- ===== RIGHT MONITOR (panoramic X-ray display) ===== -->
+  <!-- Desk right -->
+  <rect x="810" y="430" width="370" height="22" rx="4" fill="#1a2e50" filter="url(#s4t)"/>
+  <rect x="800" y="450" width="390" height="130" rx="5" fill="#0f1e38"/>
+  <rect x="802" y="452" width="386" height="4" fill="#b8966a" opacity="0.4"/>
+  <!-- Desk legs -->
+  <rect x="825" y="578" width="16" height="62" rx="3" fill="#0d1830"/>
+  <rect x="1149" y="578" width="16" height="62" rx="3" fill="#0d1830"/>
+
+  <!-- Monitor 2 (wide panoramic) -->
+  <rect x="818" y="133" width="320" height="302" rx="8" fill="#14182a" filter="url(#s4t)"/>
+  <rect x="823" y="138" width="310" height="290" rx="6" fill="url(#screenG)"/>
+  <rect x="823" y="138" width="310" height="290" fill="url(#screenGlow)" opacity="0.4"/>
+
+  <!-- Screen content: Panoramic X-ray -->
+  <!-- Header -->
+  <rect x="823" y="138" width="310" height="20" rx="6" fill="#0d2b55"/>
+  <rect x="823" y="151" width="310" height="7" fill="#0d2b55"/>
+  <text x="978" y="151" font-family="Arial, sans-serif" font-size="8" fill="#b8966a" text-anchor="middle" letter-spacing="1.5">PANORAMIC RADIOGRAPH</text>
+
+  <!-- Patient info bar -->
+  <rect x="825" y="160" width="150" height="14" rx="2" fill="rgba(13,43,85,0.8)"/>
+  <text x="832" y="170" font-family="Arial, sans-serif" font-size="6.5" fill="#80b0e0">PT: ORDONEZ, F.  |  2024-05-15</text>
+
+  <!-- Panoramic X-ray image area -->
+  <rect x="826" y="177" width="304" height="175" rx="3" fill="#060e18"/>
+
+  <!-- Upper jaw bone (arch shape) -->
+  <path d="M 840 240 Q 840 205, 870 195 Q 905 183, 978 180 Q 1050 183, 1082 195 Q 1112 205, 1112 240
+           Q 1112 258, 1100 265 Q 1088 272, 1070 270 Q 1058 268, 1050 260 Q 1040 252, 1020 250
+           Q 1000 248, 978 248 Q 956 248, 936 250 Q 916 252, 906 260 Q 896 268, 883 270 Q 865 272, 853 265 Q 841 258, 840 240 Z"
+        fill="#2a4878" opacity="0.7" stroke="#3a6090" stroke-width="0.8"/>
+
+  <!-- Upper teeth (stylized individual teeth) -->
+  <path d="M 878 265 L 875 295 Q 878 305, 883 300 L 886 270 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 893 262 L 891 295 Q 894 307, 899 302 L 900 264 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 907 258 L 906 295 Q 910 310, 915 305 L 915 260 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 922 255 L 922 296 Q 926 312, 931 307 L 930 256 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 938 253 L 939 296 Q 943 313, 948 308 L 946 253 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 954 252 L 956 296 Q 960 314, 964 309 L 962 252 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 970 252 L 972 296 Q 976 314, 980 309 L 978 252 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 986 252 L 988 296 Q 992 314, 996 309 L 994 252 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 1001 253 L 1004 296 Q 1008 313, 1012 308 L 1009 253 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 1017 255 L 1020 296 Q 1024 312, 1028 307 L 1025 256 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 1032 258 L 1034 295 Q 1038 308, 1043 304 L 1040 260 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 1046 262 L 1047 295 Q 1051 307, 1055 302 L 1053 264 Z" fill="#3a5878" opacity="0.85"/>
+  <path d="M 1058 265 L 1058 294 Q 1062 305, 1067 300 L 1066 267 Z" fill="#3a5878" opacity="0.85"/>
+
+  <!-- Lower jaw bone -->
+  <path d="M 838 295 Q 840 330, 852 342 Q 866 352, 883 350 Q 897 348, 906 340 Q 916 332, 921 318
+           Q 926 305, 936 300 Q 956 296, 978 296 Q 1000 296, 1020 300 Q 1030 305, 1035 318
+           Q 1040 332, 1050 340 Q 1059 348, 1072 350 Q 1090 352, 1104 342 Q 1116 330, 1118 295"
+        fill="#2a4878" opacity="0.6" stroke="#3a6090" stroke-width="0.8"/>
+
+  <!-- Lower teeth -->
+  <path d="M 882 295 L 881 270 Q 877 260, 872 265 L 874 295 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 898 295 L 896 266 Q 892 256, 887 261 L 888 295 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 913 296 L 912 263 Q 908 253, 904 258 L 904 296 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 928 296 L 927 260 Q 923 250, 919 255 L 920 296 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 944 296 L 943 258 Q 939 249, 935 254 L 936 296 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 960 296 L 959 257 Q 955 248, 951 253 L 952 296 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 976 296 L 975 257 Q 971 248, 967 253 L 968 296 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 992 296 L 991 258 Q 987 249, 983 254 L 984 296 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 1007 296 L 1006 260 Q 1002 250, 998 255 L 999 296 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 1022 296 L 1021 263 Q 1017 253, 1013 258 L 1014 296 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 1036 296 L 1036 266 Q 1032 256, 1028 261 L 1028 296 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 1050 295 L 1050 268 Q 1046 258, 1042 263 L 1042 295 Z" fill="#3a5878" opacity="0.8"/>
+  <path d="M 1063 295 L 1064 270 Q 1060 261, 1056 266 L 1056 295 Z" fill="#3a5878" opacity="0.8"/>
+
+  <!-- Sinus cavities -->
+  <ellipse cx="920" cy="208" rx="35" ry="18" fill="rgba(10,25,50,0.5)" stroke="#2a4878" stroke-width="0.8"/>
+  <ellipse cx="1036" cy="208" rx="35" ry="18" fill="rgba(10,25,50,0.5)" stroke="#2a4878" stroke-width="0.8"/>
+
+  <!-- Spine (center) -->
+  <rect x="974" y="180" width="8" height="120" rx="2" fill="#1a2e50" opacity="0.6"/>
+  <rect x="974" y="188" width="8" height="10" rx="1" fill="#2a4878" opacity="0.6"/>
+  <rect x="974" y="203" width="8" height="10" rx="1" fill="#2a4878" opacity="0.6"/>
+  <rect x="974" y="218" width="8" height="10" rx="1" fill="#2a4878" opacity="0.6"/>
+  <rect x="974" y="233" width="8" height="10" rx="1" fill="#2a4878" opacity="0.6"/>
+  <rect x="974" y="248" width="8" height="10" rx="1" fill="#2a4878" opacity="0.6"/>
+  <rect x="974" y="263" width="8" height="10" rx="1" fill="#2a4878" opacity="0.6"/>
+  <rect x="974" y="278" width="8" height="10" rx="1" fill="#2a4878" opacity="0.6"/>
+
+  <!-- Measurement annotations -->
+  <line x1="1082" y1="180" x2="1082" y2="296" stroke="#60e0ff" stroke-width="0.8" opacity="0.5"/>
+  <line x1="1078" y1="180" x2="1086" y2="180" stroke="#60e0ff" stroke-width="0.8" opacity="0.5"/>
+  <line x1="1078" y1="296" x2="1086" y2="296" stroke="#60e0ff" stroke-width="0.8" opacity="0.5"/>
+  <text x="1100" y="242" font-family="Arial, sans-serif" font-size="7" fill="#60e0ff" opacity="0.7" transform="rotate(90,1100,242)">58 mm</text>
+
+  <!-- Data bar below panoramic -->
+  <rect x="826" y="354" width="304" height="68" rx="3" fill="rgba(8,18,36,0.85)"/>
+  <rect x="828" y="356" width="96" height="64" rx="2" fill="rgba(13,43,85,0.6)"/>
+  <text x="876" y="371" font-family="Arial, sans-serif" font-size="6.5" fill="#b8966a" text-anchor="middle">TOOTH COUNT</text>
+  <text x="876" y="386" font-family="Arial, sans-serif" font-size="14" fill="#60e0ff" text-anchor="middle" font-weight="bold">28</text>
+  <text x="876" y="399" font-family="Arial, sans-serif" font-size="6" fill="#6080a0" text-anchor="middle">ALL PRESENT</text>
+  <circle cx="876" cy="410" r="4" fill="#60a820"/>
+
+  <rect x="930" y="356" width="96" height="64" rx="2" fill="rgba(13,43,85,0.6)"/>
+  <text x="978" y="371" font-family="Arial, sans-serif" font-size="6.5" fill="#b8966a" text-anchor="middle">BONE LEVEL</text>
+  <text x="978" y="386" font-family="Arial, sans-serif" font-size="11" fill="#60e0ff" text-anchor="middle" font-weight="bold">NORMAL</text>
+  <rect x="934" y="392" width="88" height="5" rx="2" fill="#0a1428"/>
+  <rect x="934" y="392" width="72" height="5" rx="2" fill="#60a820" opacity="0.8"/>
+
+  <rect x="1032" y="356" width="96" height="64" rx="2" fill="rgba(13,43,85,0.6)"/>
+  <text x="1080" y="371" font-family="Arial, sans-serif" font-size="6.5" fill="#b8966a" text-anchor="middle">TMJ STATUS</text>
+  <text x="1080" y="387" font-family="Arial, sans-serif" font-size="10" fill="#60e0ff" text-anchor="middle" font-weight="bold">HEALTHY</text>
+  <circle cx="1080" cy="404" r="7" fill="none" stroke="#60a820" stroke-width="1.5"/>
+  <text x="1080" y="408" font-family="Arial, sans-serif" font-size="9" fill="#60a820" text-anchor="middle">✓</text>
+
+  <!-- Monitor 2 bezel bottom -->
+  <rect x="818" y="428" width="320" height="14" rx="6" fill="#14182a"/>
+  <circle cx="978" cy="435" r="3" fill="#202438"/>
+  <!-- Stand -->
+  <rect x="960" y="442" width="36" height="14" rx="3" fill="#141828"/>
+  <rect x="940" y="454" width="76" height="8" rx="3" fill="#101420"/>
+
+  <!-- ===== GOLD ACCENT LINES ===== -->
+  <line x1="0"   y1="799" x2="1200" y2="799" stroke="url(#goldLine)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="0"   y1="1"   x2="1200" y2="1"   stroke="url(#goldLine)" stroke-width="1" opacity="0.3"/>
+
+  <!-- ===== AMBIENT OVERLAY ===== -->
+  <rect width="1200" height="800" fill="rgba(5,15,30,0.08)"/>
+</svg>

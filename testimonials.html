@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials | Dr. Felipe Ordonez, DDS</title>
+  <meta
+    name="description"
+    content="Read patient testimonials and reviews for Dr. Felipe Ordonez, DDS. See why patients in Wilton, CT trust our practice for cosmetic and restorative dentistry."
+  >
+  <meta property="og:title" content="Testimonials | Dr. Felipe Ordonez, DDS">
+  <meta
+    property="og:description"
+    content="See what patients are saying about their experience with Dr. Felipe Ordonez and our commitment to personalized, high-quality dental care."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cosmeticdentistrywilton.com/testimonials.html">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      --navy: #0d2b55;
+      --gold: #b8966a;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --muted: #666677;
+      --line: rgba(13, 43, 85, 0.14);
+      --shadow: 0 20px 60px rgba(8, 21, 40, 0.12);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(184, 150, 106, 0.14), transparent 28%),
+        linear-gradient(180deg, #fffdf9 0%, #f7f5f1 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--container));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+      background: rgba(247, 245, 241, 0.82);
+      border-bottom: 1px solid rgba(13, 43, 85, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 84px;
+    }
+
+    .brand {
+      display: block;
+      min-width: 0;
+    }
+
+    .brand-main {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-width: 0;
+    }
+
+    .brand-icon {
+      width: 220px;
+      height: 60px;
+      flex: none;
+      filter: drop-shadow(0 12px 24px rgba(13, 43, 85, 0.16));
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.25rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after,
+    .nav-links a[aria-current="page"]::after {
+      transform: scaleX(1);
+    }
+
+    .call-cta,
+    .hero-actions a,
+    .contact-banner a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0.9rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .call-cta {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--navy), #163d74);
+      box-shadow: 0 16px 35px rgba(13, 43, 85, 0.2);
+    }
+
+    .call-cta:hover,
+    .hero-actions a:hover,
+    .contact-banner a:hover {
+      transform: translateY(-1px);
+    }
+
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 4.5rem 0 3rem;
+    }
+
+    .contact-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.9rem;
+      border: 1px solid rgba(184, 150, 106, 0.45);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--navy);
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(184, 150, 106, 0.14);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      line-height: 1.08;
+    }
+
+    h1 {
+      margin-top: 1.25rem;
+      font-size: clamp(2.7rem, 6vw, 4.6rem);
+      max-width: 14ch;
+    }
+
+    .hero-copy p {
+      margin: 1.2rem 0 0;
+      max-width: 58ch;
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .hero-actions a {
+      background: linear-gradient(135deg, var(--gold), #c9ab82);
+      color: #1e1c19;
+      box-shadow: 0 18px 36px rgba(184, 150, 106, 0.26);
+    }
+
+    .section {
+      padding: 1.5rem 0 5rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.4rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial-card {
+      position: relative;
+      padding: 1.7rem;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 38px rgba(13, 43, 85, 0.08);
+    }
+
+    .testimonial-card::before {
+      content: "“";
+      display: block;
+      margin-bottom: 0.8rem;
+      font-family: "Playfair Display", serif;
+      font-size: 4rem;
+      line-height: 0.9;
+      color: var(--gold);
+    }
+
+    .testimonial-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .testimonial-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      font-size: 0.94rem;
+    }
+
+    .contact-banner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.6rem 1.7rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(184, 150, 106, 0.16), rgba(255, 255, 255, 0.82));
+      border: 1px solid rgba(184, 150, 106, 0.24);
+      box-shadow: 0 16px 38px rgba(13, 43, 85, 0.08);
+    }
+
+    .contact-banner p {
+      margin: 0.6rem 0 0;
+      color: var(--muted);
+    }
+
+    .site-footer {
+      padding: 1.5rem 0 2.3rem;
+      background: #081220;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .footer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem 1.4rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-meta strong {
+      color: var(--white);
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-social a {
+      color: var(--white);
+      opacity: 0.86;
+      transition: opacity 180ms ease;
+    }
+
+    .footer-social a:hover,
+    .footer-social a:focus-visible {
+      opacity: 1;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px) scale(0.985);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -3rem;
+      padding: 0.7rem 1rem;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 0 0 10px 10px;
+      z-index: 20;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(184, 150, 106, 0.85);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .header-inner,
+      .footer-inner,
+      .contact-banner {
+        align-items: flex-start;
+      }
+
+      .header-inner {
+        flex-wrap: wrap;
+        padding: 0.9rem 0;
+      }
+
+      .brand-main {
+        align-items: flex-start;
+      }
+
+      .brand-icon {
+        width: 54px;
+        height: 54px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.8rem;
+        font-size: 0.95rem;
+        overflow-x: auto;
+        padding-bottom: 0.2rem;
+      }
+
+      .call-cta {
+        width: 100%;
+      }
+
+      .page-hero {
+        padding-top: 2.2rem;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#home" aria-label="Go to home page">
+        <span class="brand-main">
+          <img class="brand-icon" src="assets/wilton-logo.png" alt="Family & Cosmetic Dentistry Logo">
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#home">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="testimonials.html" aria-current="page">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="call-cta" href="tel:+12037627300">Call (203) 762-7300</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+      <div class="container contact-shell">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Testimonials</div>
+          <h1>What Our Patients Are Saying</h1>
+          <p>
+            We are honored to have earned a 5.0-star rating on Google. Read what our
+            patients have to say about their experience at our Wilton practice and our
+            commitment to high-quality, personalized dental care.
+          </p>
+          <div class="hero-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Family+and+Cosmetic+Dentistry+of+Wilton%2C+LLC+reviews" target="_blank" rel="noreferrer">Read More on Google</a>
+          </div>
+        </div>
+        <div class="map-card reveal" style="padding: 0.5rem;">
+            <img src="assets/testimonials-hero-image.jpg" alt="Dentist attending to a smiling patient" style="width: 100%; height: 80%; object-fit: cover; border-radius: var(--radius-md);">
+          </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="testimonial-grid">
+          <article class="testimonial-card reveal">
+            <p>
+              I love this whole practice. Everyone is so nice and kind. I have always
+              been afraid of the dentist and I finally have people that are equipped to
+              deal with my anxiety and small mouth. They truly are amazing.
+            </p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">Michele Smith</span>
+              <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p>
+              Dr O broke some news to me gently. My wife recommended him. I can see why
+              she likes him. He is my dentist now.
+            </p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">Tom Belli</span>
+              <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p>
+              Amazing! Thank you Dr Ordonez for fixing my chipped front tooth. Now I can
+              smile at my best friends wedding next week. I also want to thank your
+              extremely friendly and accommodating staff for scheduling my emergency visit.
+            </p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">Catherine Zalucky</span>
+              <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p>
+              I really had an enjoyable experience at Dr. Ordonez's office. Everyone was
+              positive, personable, and professional, and even a routine visit felt calm
+              and easy from start to finish.
+            </p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">Sean O.</span>
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p>
+              I was able to get help quickly for a chipped tooth. Dr. Ordonez was a great
+              listener, explained my options clearly, and made me feel confident about the
+              treatment plan.
+            </p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">Nancy H.</span>
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p>
+              My smile looks natural, bright, and completely like me, only better. The
+              office was thoughtful at every step, and the results gave me much more
+              confidence than I expected.
+            </p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">Laura M.</span>
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p>
+              From the first phone call to the final visit, everything felt personal and
+              polished. I never felt rushed, and the staff made the whole process feel
+              comfortable and well organized.
+            </p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">James R.</span>
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p>
+              I came in hoping to improve my smile and left feeling like I had found a
+              practice I can trust long term. The recommendations felt honest and tailored
+              to what I actually needed.
+            </p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">Patricia S.</span>
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p>
+              The work was beautifully done, and the results were subtle in the best way.
+              My teeth look healthier and more refined, and friends keep telling me I look
+              more confident.
+            </p>
+            <div class="testimonial-footer">
+              <span class="testimonial-name">Michael T.</span>
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-banner reveal">
+          <div>
+            <h3>Ready to schedule your visit?</h3>
+            <p>Call the office today to speak with our friendly team.</p>
+          </div>
+          <a href="tel:+12037627300">Call (203) 762-7300</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-meta">
+        <span><strong>Dr. Felipe Ordonez, DDS</strong></span>
+        <span>
+          <a
+            href="https://www.google.com/maps/search/?api=1&amp;query=142%20Old%20Ridgefield%20Rd%20Suite%20204%2C%20Wilton%2C%20CT%2006897"
+            target="_blank"
+            rel="noreferrer"
+          >
+            142 Old Ridgefield Rd Suite 204, Wilton, CT 06897
+          </a>
+        </span>
+        <span><a href="tel:+12037627300">(203) 762-7300</a></span>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/cosmeticdentistrywilton/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/FelipeOrdonezDDS/" target="_blank" rel="noreferrer">Facebook</a>
+      </div>
+      <p>Copyright &copy; <span id="copyright-year">2026</span> Cosmetic Dentistry Wilton</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      observer.observe(element);
+    });
+
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
