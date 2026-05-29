@@ -525,6 +525,41 @@
       box-shadow: 0 0 0 5px rgba(184, 150, 106, 0.12);
     }
 
+    .hours-panel {
+      margin-top: 2rem;
+      padding: 1.8rem;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 38px rgba(13, 43, 85, 0.08);
+    }
+
+    .hours-list {
+      display: grid;
+      gap: 0.85rem;
+      padding: 0;
+      margin: 1.2rem 0 0;
+      list-style: none;
+    }
+
+    .hours-list li {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hours-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .hours-list strong {
+      color: var(--navy);
+    }
+
     .doctor-preview {
       display: grid;
       grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
@@ -758,6 +793,11 @@
 
       .hero-card {
         min-height: 420px;
+      }
+
+      .hours-list li {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       .doctor-portrait {
@@ -1143,6 +1183,26 @@
         </div>
       </div>
     </section> -->
+
+    <section class="section" aria-labelledby="office-hours-heading">
+      <div class="container">
+        <div class="hours-panel reveal">
+          <div class="section-label">Office Hours</div>
+          <h2 class="section-heading" id="office-hours-heading">Plan your visit with confidence.</h2>
+          <p class="section-intro">
+            Office hours are listed here to make scheduling and planning your visit
+            as simple as possible.
+          </p>
+          <ul class="hours-list">
+            <li><strong>Monday</strong><span>8am - 5pm</span></li>
+            <li><strong>Tuesday</strong><span>8am - 5pm</span></li>
+            <li><strong>Wednesday</strong><span>8am - 5pm</span></li>
+            <li><strong>Thursday</strong><span>7am - 4pm</span></li>
+            <li><strong>Saturday</strong><span>By appointment</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

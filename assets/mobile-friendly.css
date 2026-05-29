@@ -144,3 +144,56 @@
     height: 300px;
   }
 }
+
+/* Shared card alignment so multi-card sections feel orderly across pages. */
+
+.section-grid,
+.testimonial-grid,
+.results-grid,
+.procedures-grid,
+.gallery-grid,
+.contact-grid,
+.doctor-preview,
+.doctor-bio-grid {
+  align-items: stretch;
+}
+
+.section-grid > *,
+.testimonial-grid > *,
+.results-grid > *,
+.procedures-grid > *,
+.gallery-grid > *,
+.contact-grid > *,
+.doctor-preview > *,
+.doctor-bio-grid > * {
+  height: 100%;
+}
+
+.trust-card,
+.testimonial-card,
+.map-card,
+.result-card,
+.procedure-card,
+.hours-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.qr-card {
+  height: 100%;
+  align-content: start;
+}
+
+.procedure-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.testimonial-footer,
+.map-actions,
+.section-actions {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
