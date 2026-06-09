@@ -31,6 +31,13 @@
   transition: transform 180ms ease, opacity 180ms ease;
 }
 
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(184, 150, 106, 0.85);
+  outline-offset: 3px;
+}
+
 .site-header.nav-open .nav-toggle-bars span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
@@ -196,4 +203,25 @@
 .section-actions {
   margin-top: auto;
   padding-top: 1.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

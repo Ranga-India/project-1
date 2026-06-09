@@ -8,6 +8,17 @@
   }
 
   const desktopQuery = window.matchMedia("(min-width: 769px)");
+  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  const showAllRevealContent = () => {
+    if (!reducedMotionQuery.matches) {
+      return;
+    }
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      element.classList.add("is-visible");
+    });
+  };
 
   const closeMenu = () => {
     header.classList.remove("nav-open");
@@ -40,4 +51,12 @@
   } else {
     desktopQuery.addListener(handleDesktopChange);
   }
+
+  if (reducedMotionQuery.addEventListener) {
+    reducedMotionQuery.addEventListener("change", showAllRevealContent);
+  } else {
+    reducedMotionQuery.addListener(showAllRevealContent);
+  }
+
+  showAllRevealContent();
 })();
